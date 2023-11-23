@@ -14,10 +14,7 @@ async function bootstrap() {
     preflightContinue: false,
     optionsSuccessStatus: 204
   });
-
-  if (configService.get<string>("NODE_ENV") === "dev") {
     SwaggerConfig.init(app);
-  }
 
 
   // app.setGlobalPrefix("api", { exclude: [""] });
