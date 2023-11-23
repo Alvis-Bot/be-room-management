@@ -224,6 +224,27 @@ export const ErrorCode = {
 		message : 'sale is locked',
 		status : HttpStatus.UNAUTHORIZED,
 		code : 'SALE_IS_LOCKED'
-	}
+	},
+	ROOM_CATEGORY_NOT_FOUND: {
+		message : 'room category not found',
+		status : HttpStatus.NOT_FOUND,
+		code : 'ROOM_CATEGORY_NOT_FOUND'
+	},
+	ROOM_NOT_FOUND: {
+		message : 'room not found',
+		status : HttpStatus.NOT_FOUND,
+		code : 'ROOM_NOT_FOUND'
+	},
+	EVENT_NOT_FOUND: {
+		message : 'event not found',
+		status : HttpStatus.NOT_FOUND,
+		code : 'EVENT_NOT_FOUND'
+	},
+	ATTENDANCE_DETAIL_NOT_FOUND: {
+		message : 'attendance detail not found',
+		status : HttpStatus.NOT_FOUND,
+		code : 'ATTENDANCE_DETAIL_NOT_FOUND'
+	},
+
 
 };

@@ -20,6 +20,11 @@ export class Pagination {
 	@IsOptional()
 	page?: number = 1;
 
+
+	@ApiPropertyOptional({})
+	@IsOptional()
+	search?: string;
+
 	@ApiPropertyOptional({
 		minimum: 1,
 		maximum: 50,

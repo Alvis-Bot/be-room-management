@@ -4,8 +4,8 @@ import { INestApplication } from "@nestjs/common";
 export class SwaggerConfig {
 	static init(app: INestApplication) {
 		const options = new DocumentBuilder()
-			.setTitle("Web BO API")
-			.setDescription("Web BO API description")
+			.setTitle("Room Management API")
+			.setDescription("Room Management API description")
 			.setVersion("1.0")
 			.addBearerAuth(
 				{ type: "http", scheme: "bearer", bearerFormat: "JWT" },
@@ -14,6 +14,6 @@ export class SwaggerConfig {
 			.addSecurityRequirements("Authorization")
 			.build();
 		const document = SwaggerModule.createDocument(app, options);
-		SwaggerModule.setup("docs", app, document);
+		SwaggerModule.setup("api", app, document);
 	}
 }

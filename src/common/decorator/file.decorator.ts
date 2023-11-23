@@ -1,11 +1,12 @@
 import { MulterField, MulterOptions } from "@nestjs/platform-express/multer/interfaces/multer-options.interface";
+
+import { ApiConsumes } from "@nestjs/swagger";
 import { applyDecorators, UseInterceptors } from "@nestjs/common";
 import { FileFieldsInterceptor, FileInterceptor, FilesInterceptor } from "@nestjs/platform-express";
-import { ApiConsumes } from "@nestjs/swagger";
 
 
 export const ApiFile = (  fieldName : string  , localOptions : MulterOptions = {} ) => {
-  return applyDecorators(UseInterceptors(FileInterceptor(fieldName, localOptions)));
+  return applyDecorators(UseInterceptors(FileInterceptor(fieldName, localOptions)), ApiConsumes("multipart/form-data"));
 }
 
 export const ApiFiles = (  fieldName : string , maxCount : number  , localOptions : MulterOptions = {} ) => {
